@@ -12,11 +12,11 @@ import { DeleteLessonComponent } from './components/delete-lesson/delete-lesson.
 import { AddLessonComponent } from './components/add-lesson/add-lesson.component';
 
 export const routes: Routes = [
-    { path: 'courses/edit/:id', component: EditCourseComponent, data: { prerender: true, getPrerenderParams: getPrerenderParams('courses/edit/:id') } },//
-    { path: 'lessons/:courseId/delete/:id', component: DeleteLessonComponent, data: { prerender: true, getPrerenderParams: getPrerenderParams('lessons/:courseId/delete/:id') } },
-    { path: 'lessons/:courseId/edit/:id', component: EditLessonComponent, data: { prerender: true, getPrerenderParams: getPrerenderParams('lessons/:courseId/edit/:id') } },
-    { path: 'courses/delete/:id', component: DeleteCourseComponent, data: { prerender: true, getPrerenderParams: getPrerenderParams('courses/delete/:id') } },//
-    { path: 'lessons/:courseId/add', component: AddLessonComponent, data: { prerender: true, getPrerenderParams: getPrerenderParams('lessons/:courseId/add') } },
+    // { path: 'courses/edit/:id', component: EditCourseComponent, data: { prerender: true, getPrerenderParams: getPrerenderParams('courses/edit/:id') } },//
+    // { path: 'lessons/:courseId/delete/:id', component: DeleteLessonComponent, data: { prerender: true, getPrerenderParams: getPrerenderParams('lessons/:courseId/delete/:id') } },
+    // { path: 'lessons/:courseId/edit/:id', component: EditLessonComponent, data: { prerender: true, getPrerenderParams: getPrerenderParams('lessons/:courseId/edit/:id') } },
+    // { path: 'courses/delete/:id', component: DeleteCourseComponent, data: { prerender: true, getPrerenderParams: getPrerenderParams('courses/delete/:id') } },//
+    // { path: 'lessons/:courseId/add', component: AddLessonComponent, data: { prerender: true, getPrerenderParams: getPrerenderParams('lessons/:courseId/add') } },
     { path: 'dashboard', component: DashboardComponent },
     { path: "register", component: RegisterComponent },
     { path: "home", component: HomeComponent },
