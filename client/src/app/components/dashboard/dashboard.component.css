@@ -1,0 +1,41 @@
+.dashboard-content {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.course-card {
+    width: calc(33% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+}
+
+mat-sidenav {
+    background-color: #f4f4f4;
+}
+
+mat-list-item {
+    font-size: 16px;
+    padding: 10px 20px;
+<<<<<<< HEAD
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+img {
+    height: 40px;
+    margin-left: 10px;
+=======
+>>>>>>> 9132c2f470960da332748bc63574d09cafab1ed0
+}

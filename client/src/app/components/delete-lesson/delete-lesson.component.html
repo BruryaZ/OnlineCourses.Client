@@ -1,0 +1,12 @@
+@if (lesson) {
+<mat-card>
+  <mat-card-title>Delete Lesson</mat-card-title>
+  <mat-card-content>
+    <p>Are you sure you want to delete the lesson "{{ lesson.title }}"?</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="warn" (click)="onDelete()">Delete</button>
+    <button mat-raised-button (click)="onCancel()">Cancel</button>
+  </mat-card-actions>
+</mat-card>
+}

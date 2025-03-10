@@ -1,0 +1,51 @@
+<div class="container">
+  <mat-card-title>The courses</mat-card-title>
+  @for (course of fullCourses; track $index) {
+  <ng-container>
+    <mat-card class="course-card">
+      <mat-card-header>
+        <mat-card-title>{{ course.title }}</mat-card-title>
+        <mat-card-subtitle>Teacher ID: {{ course.teacherId }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ course.description }}</p>
+
+        <mat-card-title>The lessons:</mat-card-title>
+        @for (lesson of course.lessons; track $index) {
+        <mat-card class="lesson-card">
+          <mat-card-header>
+            <mat-card-title>{{ lesson.title }}</mat-card-title>
+            <mat-card-subtitle>Course ID: {{ lesson.courseId }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>{{ lesson.content }}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <mat-card-actions>
+              <button appRoundShadow mat-button color="warn"
+                [routerLink]="['/lessons',course.id, 'delete', lesson.id]">Delete Lesson</button>
+              <button appRoundShadow mat-button color="accent"
+                [routerLink]="['/lessons',course.id,'edit', lesson.id]">Edit
+                Lesson</button>
+              <button appRoundShadow mat-button color="accent" [routerLink]="['/lessons',course.id,'add']">Add
+                Lesson</button>
+            </mat-card-actions>
+
+          </mat-card-actions>
+        </mat-card>
+        }
+        @if(course.lessons.length === 0)
+        {
+        <ng-container>
+          <p>No lessons yet.</p>
+        </ng-container>
+        }
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" [routerLink]="['/courses/edit', course.id]">Edit</button>
+        <button mat-raised-button color="warn" [routerLink]="['/courses/delete', course.id]">Delete</button>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+  }
+</div>

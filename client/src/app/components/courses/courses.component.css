@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.course-card {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+mat-card {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: space-between;
+}

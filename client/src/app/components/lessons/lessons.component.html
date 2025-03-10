@@ -1,0 +1,10 @@
+<p>lessons works!</p>
+@if(this.list.length === 0) {
+<p>No lessons</p>
+}
+@else {
+<p>Lessons</p>
+@for (item of this.list; track $index) {
+<div>{{item.content}} -{{item.courseId}}- {{item.title}}</div>
+}
+}

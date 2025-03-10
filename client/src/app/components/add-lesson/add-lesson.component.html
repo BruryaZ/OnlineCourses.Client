@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-title>Add a new lesson</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="courseForm" (ngSubmit)="onSubmit()" class="form-container">
+      <mat-form-field class="form-field" appearance="fill">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title" placeholder="Enter lesson title" required />
+        <mat-error *ngIf="courseForm.get('title').invalid && (courseForm.get('title').dirty || courseForm.get('title').touched)">
+          Please enter a valid title.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form-field" appearance="fill">
+        <mat-label>Content</mat-label>
+        <textarea matInput formControlName="content" placeholder="Enter lesson content" required></textarea>
+        <mat-error *ngIf="courseForm.get('content').invalid && (courseForm.get('content').dirty || courseForm.get('content').touched)">
+          Please enter valid content.
+        </mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="!courseForm.valid">Add the Lesson</button>
+    </form>
+  </mat-card-content>
+</mat-card>

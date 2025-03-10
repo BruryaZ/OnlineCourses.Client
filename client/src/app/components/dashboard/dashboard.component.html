@@ -1,0 +1,33 @@
+<mat-toolbar color="primary">
+  <span>Online Courses</span>
+<<<<<<< HEAD
+  <span class="spacer"></span>
+  <span>{{ currentDate | date:'fullDate' }}</span>
+=======
+>>>>>>> 9132c2f470960da332748bc63574d09cafab1ed0
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened>
+    <mat-nav-list>
+<<<<<<< HEAD
+      <a mat-list-item (click)="navigateToComponent('login')">Log in</a>
+      <a mat-list-item (click)="navigateToComponent('register')">Sign up</a>
+=======
+      <a mat-list-item (click)="navigateToComponent('login')">Log In</a>
+      <a mat-list-item (click)="navigateToComponent('sign-up')">Sign Up</a>
+>>>>>>> 9132c2f470960da332748bc63574d09cafab1ed0
+      <a mat-list-item (click)="navigateToComponent('home')">Home</a>
+      <a mat-list-item (click)="navigateToComponent('courses')">Courses</a>
+      <a mat-list-item (click)="navigateToComponent('add-course')">Add a Course</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+<<<<<<< HEAD
+    <app-user-details [selectedComponent]="selectedComponent2"></app-user-details>
+=======
+>>>>>>> 9132c2f470960da332748bc63574d09cafab1ed0
+    <router-outlet></router-outlet> <!-- כאן ייטען התוכן של הקומפוננטה שנבחרה -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
